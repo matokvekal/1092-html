@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/index.css" rel="stylesheet" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <h1>Welcome, <span id="username">[User's Name]</span>!</h1>
+    <p>Congratulations, you have successfully logged in.</p>
+    <p>
+ 
+    </p>
+
+    <script>
+      const usernameSpan = document.getElementById("username");
+debugger
+      const username = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("username="))
+        .split("=")[1];
+
+      if (username) {
+        usernameSpan.textContent = username;
+      }
+    </script>
+  </body>
+</html>
